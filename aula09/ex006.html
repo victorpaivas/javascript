@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +12,35 @@
             color: white;
             font: normal 20pt white;
         }
+
+        img {
+            box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.315);
+        }
     </style>
 </head>
+
 <body>
     <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usaro o <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <p>Navegando na árvore DOM com seletor <strong>MARCA ByTagName</strong></p>
+    <p id="p2">Navegando na árvore DOM com seletor <strong>ID ElementID</strong></p>
+    <p name="p3">Navegando na árvore DOM com seletor <strong>NOME ElementByName</strong></p>
+    <p class="p4">Navegando na árvore DOM com seletor <strong>CLASSE ElementsByClassName</strong></p>
+    <p id="p5">Navegando na árvore DOM com seletor <strong>SELETOR querySelector ou querySelectorAll</strong></p>
+    <img src="code.JPG" alt="">
     <script>
-        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementById('p2')
+        var p3 = window.document.getElementsByName('p3')[0]
+        var p4 = window.document.getElementsByClassName ('p4')[0]
+        var p5 = window.document.querySelector('p#p5')
+
+        p1.style.color = 'black'
+        p2.style.color = 'blue'
+        p3.style.color = 'red'
+        p4.style.color = 'yellow'
+        p5.style.color = 'green'
+
     </script>
 </body>
+
 </html>
