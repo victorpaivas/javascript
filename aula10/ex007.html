@@ -5,8 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Valores</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            font: normal 15pt Arial;
+            background-color: rgba(0, 0, 0, 0.788);
+        }
+
+        input {
+            font: normal 10pt Arial;
+            width: 100px;
+        }
+
+        main {
+            display: block;
+            text-align: center;
+            background-color: grey;
+            width: 500px;
+            height: 200px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 0px 0px 5px 2px rgba(15, 11, 11, 0.541);
+            border-radius: 10px;
+        }
+        
+        main > h1 {
+            color: rgb(255, 253, 253);
+        }
+
+        input#txt1 {
+            text-align: center;
+        }
+
+        input#txt2 {
+            text-align: center;
+        }
+
+        main > input#somar {
+            font: normal 15px Arial;
+            width: 30px;
+        }
+
+        div#res {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        input#txt3 {
+            text-align: center;
+        }
+
+        input#txt4 {
+            text-align: center;
+        }
+        main > input#somar:hover {
+            background: red;
+        }
+
+        main > input#multiplicar {
+            font: normal 15px Arial;
+            width: 30px;
+        }
+
+        main > input#multiplicar:hover {
+            background: red;
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <h1>Somando Valores</h1>
+        <input type="number" name="txt1" id="txt1"> +
+        <input type="number" name="txt2" id="txt2">
+        <input type="button" value="=" onclick="somar()" id="somar">
+        <div id="res">Resultado?</div>
+        <h1>Multiplicando Valores</h1>
+        <input type="number" name="txt1" id="txt3"> *
+        <input type="number" name="txt2" id="txt4">
+        <input type="button" value="=" onclick="multiplicar()" id="multiplicar">
+        <div id="res2">Resultado?</div>
+    </main>
+
+    <script>
+
+        function somar() {
+            var tn1 = window.document.getElementById('txt1')
+            var tn2 = window.document.getElementById('txt2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+
+        function multiplicar() {
+            var tn1 = window.document.getElementById('txt3')
+            var tn2 = window.document.getElementById('txt4')
+            var res = window.document.getElementById('res2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var m = n1 * n2
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a ${m}`
+        }
+
+
+    </script>
 </body>
 </html>
