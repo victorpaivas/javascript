@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: Normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+            Interaja...
+    </div>
+    <br>
+    <h2>Evento DOM no HTML atenção na linha 21</h2>
+    <img src="eventhtml.JPG" alt="">
+    <br>
+    <h2>Evento DOM dentro da tag Script atenção nas linahs 31,32 e 33.</h2>
+    <p><strong>RECOMENDADO</strong></p>
+    <img src="eventjs.JPG" alt="">
+    <script>
+        var a = window.document.getElementById('area')
+        //Não esquecer de colocar o nome da Variável antes do addEventListener
+        a.addEventListener('click', clicar) 
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', saiu)
+
+        function clicar() {
+            a.style.background = 'red'
+            a.innerText = 'Clicou'
+        }
+        function entrar() {
+            a.style.background = 'yellow'
+        }
+        function saiu() {
+            a.style.background = 'blue'
+            a.innerText = 'Interaja'
+        }
+    </script>
+</body>
+</html>
