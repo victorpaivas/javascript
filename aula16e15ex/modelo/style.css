@@ -19,7 +19,7 @@ section {
     box-shadow: 1px 1px 4px 5px rgba(0, 0, 0, 0.267);
 }
 
-select {
+select#flista {
     width: 150px;
 }
 
